@@ -9,6 +9,7 @@ import { v4 as uuid } from 'uuid';
 import { tryAddOrUpdateNFT } from './mint-nft';
 import { uniq } from 'lodash';
 import { SolanaWallet } from '@particle-network/solana-wallet';
+import { Wallet } from '@particle-network/auth';
 
 export async function buyNFT(wallet: SolanaWallet, auctionManagerAddress: string): Promise<IApiStandardResponse> {
   const address: any = wallet?.publicKey?.toBase58();

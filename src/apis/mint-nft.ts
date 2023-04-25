@@ -42,7 +42,7 @@ export async function mintNFT(wallet: SolanaWallet, config: any, fromData: FormD
     return createApiStandardResponse(responseMintNFT.error);
   }
 
-  const responseSigned = await signTransaction(wallet, responseMintNFT.result.transaction.serialized);
+    const responseSigned = await signTransaction(wallet, responseMintNFT.result.transaction.serialized);
 
   if (responseSigned.error) {
     return createApiStandardResponse(responseSigned.error);
